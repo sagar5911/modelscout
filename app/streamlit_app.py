@@ -235,6 +235,7 @@ def render_sidebar() -> dict:
 
 def render_header() -> None:
     mode_label = _recommender_mode_label()
+    st.caption("🚀 Autonomous CI/CD Pipeline Active (Version 1.0.1)")
     st.markdown(
         f"""
         <div class="ms-header">
