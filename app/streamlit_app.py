@@ -852,7 +852,21 @@ def render_explanation(
     st.markdown("#### Feature importance")
     top_model = rec_df.iloc[0]["model"] if len(rec_df) else "Random Forest"
 
- 
+    with st.spinner(f"Computing permutation importance for {top_model}..."):
+        try:
+            imp_df, method_label = compute_importance(
+                model_name=top_model,
+                df=df,
+                target_col=target_col,
+                task=task,
+                seed=seed,
+            )
+        except Exception as e:
+            st.markdown(
+                f'<div class="ms-box ms-box-error">Could not compute importance: {e}</div>',
+                unsafe_allow_html=True,
+            )
+            imp_df = None
             method_label = "Error"
 
     if imp_df is not None and not imp_df.empty:
