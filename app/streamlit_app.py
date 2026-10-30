@@ -137,9 +137,7 @@ def render_sidebar() -> dict:
         st.session_state["use_sample"] = True
         st.session_state["uploaded_file"] = None
 
-    if uploaded is not None:
-        st.session_state["use_sample"] = False
-        st.session_state["uploaded_file"] = uploaded
+    if
 
     # Load data
     if st.session_state.get("use_sample"):
