@@ -121,14 +121,7 @@ def render_sidebar() -> dict:
         '<div class="ms-sidebar-section">Dataset</div>', unsafe_allow_html=True
     )
 
-    uploaded = st.sidebar.file_uploader(
-        "Upload CSV", type=["csv"], label_visibility="collapsed"
-    )
-    use_sample = st.sidebar.button("Use sample dataset", key="use_sample_btn")
-
-    st.sidebar.markdown(
-        '<div class="ms-sidebar-section">Target</div>', unsafe_allow_html=True
-    )
+    
 
     df: Optional[pd.DataFrame] = None
     source_label = ""
