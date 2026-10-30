@@ -240,7 +240,7 @@ def render_header() -> None:
         f"""
         <div class="ms-header">
             <div class="ms-header-left">
-                <h1>ModelScout</h1>
+                <h1>ModelScouttt</h1>
                 <div class="ms-header-desc">
                     Upload a CSV, choose a target column, and get an ML model recommendation
                     — without training every model.
